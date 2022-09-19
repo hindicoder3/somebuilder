@@ -1,15 +1,20 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
-        "module": "commonjs",
-        "rootDir": "./src",
-        "declaration": true,
-        "outDir": "./dist",
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "strict": false,
-        "skipLibCheck": true,
-        "typeRoots": ["./src/types", "node_modules/@types"]
+		"lib": ["ESNext", "DOM"],
+		"target": "ES2022",
+		"module": "ESNext",
+		"declaration": false,
+		"sourceMap": false,
+		"allowJs": false,
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"alwaysStrict": true,
+		"removeComments": true,
+		"esModuleInterop": true,
+		"moduleResolution": "NodeNext",
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
     },
     "include": ["./src"]
 }
