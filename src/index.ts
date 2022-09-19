@@ -1,5 +1,5 @@
 import { Canvas, GlobalFonts } from "@napi-rs/canvas";
-import { join } from "path";
+import { join, dirname } from "path";
 export class WordGraphicBuilder {
   wordGuesses: string[];
   secretWord: string[];
@@ -32,6 +32,7 @@ export class WordGraphicBuilder {
     this.TEXT_COLOR = "#ffffff";
     this.wordGuesses = new Array();
     this.secretWord = Array.from(secretWord);
+    const __dirname = dirname(new URL(import.meta.url).pathname);
     GlobalFonts.registerFromPath(join(__dirname, "..", "fonts", this.FONT_NAME), "NS");
   }
 
